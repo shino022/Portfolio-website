@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Hero from './components/Hero.js';
+import "./App.css";
 
-function App() {
+const App = () => {
+  const colors = {
+    primary: 'black',
+    secondary: 'grey', 
+    accent: 'rgb(113, 249, 140)',
+    accent2: 'green', 
+    content: 'white'
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Hero colors={colors}/>
     </div>
   );
-}
+};
 
 export default App;
