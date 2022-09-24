@@ -1,9 +1,8 @@
 import styled, { keyframes } from 'styled-components';
-
+import HeroBackground from './HeroBackgound';
 const Hero = (props) => {
   const Container = styled.div`
     height: 100vh;
-    background-color: ${props.colors.primary};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,6 +10,7 @@ const Hero = (props) => {
 
   const Heading = styled.div`
     text-align: center;
+    z-index: 2;
   `;
 
   const moveToRight = keyframes`
@@ -27,7 +27,7 @@ const Hero = (props) => {
     color: ${props.colors.content};
     font-weight: 300;
     margin:0px;
-    animation: ${moveToRight} .5s ease-in-out;
+    animation: ${moveToRight} .7s ease-in-out .1s;
   `;
 
   const Name = styled.span`
@@ -49,7 +49,7 @@ const Hero = (props) => {
     font-weight: 300;
     margin:0px;
     padding-bottom: 15px;
-    animation: ${moveToLeft} .5s ease-in-out;
+    animation: ${moveToLeft} .7s ease-in-out .1s;
   `;
 
   const opacity = keyframes`
@@ -64,7 +64,7 @@ const Hero = (props) => {
   }
   `
   const HeadingButton = styled.a`
-    animation: ${opacity} 1s ease-in-out;
+    animation: ${opacity} 1.8s ease-in-out;
     color: ${props.colors.accent};
     box-sizing: border-box;
     box-shadow: inset 0 0 0 2px ${props.colors.accent};    
@@ -114,6 +114,7 @@ const Hero = (props) => {
   `
   return (
     <Container>
+      <HeroBackground colors={props.colors}/>
       <Heading>
         <HeadingText1>
           Hi, I'm <Name>Seunghoon</Name>.
