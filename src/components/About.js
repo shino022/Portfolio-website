@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import cssLogo from '../images/css.png';
 import TechstackIcon from './TechstackIcon';
-
+import IconsContainer from './IconsContainer';
 const About = (props) => {
   const logos = [{image: cssLogo, name: 'CSS'}];
   const Section = styled.section`
@@ -52,7 +52,7 @@ const About = (props) => {
           </Description>
         </Profile>
         <Techstack>
-          <TechstackIcon logo={logos[0]}/>
+          <IconsContainer />
         </Techstack>
       </Content>
 
