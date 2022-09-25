@@ -10,8 +10,8 @@ const TechstackIcon = (props) => {
 
   const Wrapper = styled.div`
     position: relative;
-    width: 100px; 
-    height: 100px;
+    width: 120px; 
+    height: 120px;
   `
 
   const Svg = styled(attrs)` 
@@ -31,9 +31,14 @@ const TechstackIcon = (props) => {
 
 
   const Logo = styled.img`
-    margin-top:5px;
+    margin-top: 5px;
     width: 40%;
     height: 40%;
+  `
+
+  const Name = styled.div`
+    margin-top:3px;
+    font-size: 10px;
   `
 
   return (
@@ -41,14 +46,14 @@ const TechstackIcon = (props) => {
       <Svg viewBox="0 0 200 200">   
         <polygon
           fill="none"
-          stroke='#999999'
+          stroke={props.colors.accent}
           strokeWidth='2.5px'
           points="148,183.138438763306 52,183.138438763306 4,100 52,16.8615612366939 148,16.8615612366939 196,100"   
         />
       </Svg>
       <LogoContainer>
         <Logo src={props.logo.image} />
-        <div>{props.logo.name}</div>
+        <Name>{props.logo.name}</Name>
       </LogoContainer>
     </Wrapper>)
     

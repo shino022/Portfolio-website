@@ -1,9 +1,6 @@
-import styled, { keyframes } from 'styled-components';
-import cssLogo from '../images/css.png';
-import TechstackIcon from './TechstackIcon';
+import styled from 'styled-components';
 import IconsContainer from './IconsContainer';
 const About = (props) => {
-  const logos = [{image: cssLogo, name: 'CSS'}];
   const Section = styled.section`
     display: flex;
     flex-direction: column;
@@ -52,7 +49,7 @@ const About = (props) => {
           </Description>
         </Profile>
         <Techstack>
-          <IconsContainer />
+          <IconsContainer colors={props.colors}/>
         </Techstack>
       </Content>
 

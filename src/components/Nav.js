@@ -12,6 +12,7 @@ const Nav = (props) => {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 10;
   `
   const Logo = styled.div`
 
