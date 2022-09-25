@@ -2,8 +2,13 @@ import styled, { keyframes } from 'styled-components';
 
 const Nav = (props) => {
   const NavBar = styled.nav`
-    background-color: grey;
-    height: 60px;
+    background-color: ${props.colors.primary};
+    border-top: 1px solid ${props.colors.accent};
+    border-bottom: 1px solid ${props.colors.accent};
+    position: sticky;
+    top: 0;
+    padding: 0 50px;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,11 +19,14 @@ const Nav = (props) => {
   const List = styled.ul`
     display: flex;
     list-style: none;
+    gap: 10px;
   `
   const Item = styled.li`
   `
   const Link = styled.a`
+    color: ${props.colors.content};
     text-decoration: none;
+    font-size: 14px;
   `
   return(
     <NavBar>

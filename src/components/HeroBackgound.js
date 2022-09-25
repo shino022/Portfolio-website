@@ -7,7 +7,6 @@ const HeroBackground = (props) => {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
     width: 100%;
     height: 100vh;
     z-index: 1;
@@ -65,7 +64,7 @@ const HeroBackground = (props) => {
     }
 
     const init = () => {
-      for (let i = 0; i < window.innerWidth / 10 + 30 ; i++) {
+      for (let i = 0; i < window.innerWidth / 14 + 50 ; i++) {
         particles.push(new Particle());
       };
     }

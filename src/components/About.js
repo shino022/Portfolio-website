@@ -1,10 +1,14 @@
 import styled, { keyframes } from 'styled-components';
+import cssLogo from '../images/css.png';
+import TechstackIcon from './TechstackIcon';
 
 const About = (props) => {
+  const logos = [{image: cssLogo, name: 'CSS'}];
   const Section = styled.section`
     display: flex;
     flex-direction: column;
-    background-color: ${props.colors.primary};
+    height: 1500px; // remove
+    padding-top: 50px;
   `
   const Title = styled.h2`
     color: ${props.colors.accent};
@@ -14,10 +18,11 @@ const About = (props) => {
   const Content = styled.div`
     display: flex;
     justify-content: center;
+    gap:50px;
   `
   const Profile = styled.div`
     width: 50%;
-    color: white; // temp
+    color: white; // remove
   `;
   const Picture = styled.img`
   `;
@@ -29,6 +34,11 @@ const About = (props) => {
     width: 50%;
     color: white; // temp
   `;
+  //------------------------------------
+
+
+
+
   return(
     <Section id='about'>
       <Title>ABOUT</Title>
@@ -42,7 +52,7 @@ const About = (props) => {
           </Description>
         </Profile>
         <Techstack>
-          teckstack
+          <TechstackIcon logo={logos[0]}/>
         </Techstack>
       </Content>
 
