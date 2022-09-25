@@ -1,7 +1,15 @@
 import styled from 'styled-components'
-
+import { useEffect } from 'react'
 const TechstackIcon = (props) => {
-  console.log(props);
+  useEffect(() => {
+    if(props.visible){
+      const wrapper = document.getElementById(props.logo.name);
+      wrapper.classList.add('visible');
+      console.log(wrapper);
+    }
+
+  }, [props.visible])
+
   const attrs = styled.svg.attrs({ 
     version: '1.1', 
     xmlns: 'http://www.w3.org/2000/svg', 
@@ -12,6 +20,8 @@ const TechstackIcon = (props) => {
     position: relative;
     width: 120px; 
     height: 120px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out ${(props.logo.order/10)+1}s;
   `
 
   const Svg = styled(attrs)` 
@@ -42,7 +52,7 @@ const TechstackIcon = (props) => {
   `
 
   return (
-    <Wrapper>
+    <Wrapper id={props.logo.name}>
       <Svg viewBox="0 0 200 200">   
         <polygon
           fill="none"

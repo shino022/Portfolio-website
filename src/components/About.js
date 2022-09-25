@@ -40,7 +40,7 @@ const About = (props) => {
     <Section id='about'>
       <Title>ABOUT</Title>
       <Content>
-        <Profile>
+        <Profile id='profile'>
           <div>
             picture
           </div>

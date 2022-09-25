@@ -5,3 +5,7 @@
   scroll-behavior: smooth;
   font-family: 'Open Sans', sans-serif;
 }
+
+#icons-container .visible {
+  opacity: 100 ;
+}

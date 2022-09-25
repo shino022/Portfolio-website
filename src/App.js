@@ -15,9 +15,7 @@ const App = () => {
     accent2: 'white', 
     content: 'white'
   };
-  const paddings = {
-    desktop: `20px`
-  };
+
   const Content = styled.main`
     max-width: 1600px;
     margin: 0px auto;
@@ -28,7 +26,7 @@ const App = () => {
     <div  className="App">
       <Hero colors={colors}/>
       <Nav colors={colors}/>
-      <Content className="App">
+      <Content>
         <Background colors={colors}/>
         <About colors={colors} />
       </Content>
