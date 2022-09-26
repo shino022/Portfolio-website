@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import IconsContainer from './IconsContainer';
+import profileImage from '../images/Untitled.svg';
+import ProfileIcon from './ProfileIcon';
 const About = (props) => {
   const Section = styled.section`
     display: flex;
@@ -26,7 +28,7 @@ const About = (props) => {
     justify-content: space-evenly;
     gap:30px;
     margin-bottom: 10%;
-    
+
     @media (max-width: ${props.mediaWidth.tablet}) {
       flex-direction: column;
       align-items: center;
@@ -36,6 +38,8 @@ const About = (props) => {
     color: white; // remove
   `;
   const Picture = styled.img`
+    max-width: 360px;
+    filter: invert(84%) sepia(13%) saturate(1700%) hue-rotate(72deg) brightness(102%) contrast(95%);
   `;
   const Description = styled.div`
     max-width: 360px;
@@ -55,9 +59,7 @@ const About = (props) => {
       <ContentWrapper>
         <Content>
           <Profile id='profile'>
-            <div>
-              picture
-            </div>
+            <ProfileIcon color={props.colors.accent} />
             <Description>
               Committed to the idea of life-long learning, I’m a full stack developer with a passion for JavaScript, React and all things web development. The unique combination of creativity, logic, technology and never running out of new things to discover, drives my excitement and passion for web development. Aside from development, I like working out and drinking coffee.
             </Description>
