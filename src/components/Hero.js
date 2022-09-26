@@ -85,8 +85,10 @@ const Hero = (props) => {
     &:hover {
       color: ${props.colors.accent2};
       text-shadow: 0 0 3px ${props.colors.accent},
-       0 0 5px ${props.colors.accent}, 
-       0 0 7px ${props.colors.accent};
+        0 0 5px ${props.colors.accent}, 
+        0 0 7px ${props.colors.accent},
+        0 0 9px ${props.colors.accent};
+
       box-shadow: inset 0px 0px 6px 3px ${props.colors.accent}, 0px 0px 2px 2px ${props.colors.accent};    
 
     }
