@@ -11,11 +11,11 @@ const Hero = (props) => {
   const Heading = styled.div`
     text-align: center;
     z-index: 2;
+    font-size: 1.3rem;
   `;
 
   const moveToRight = keyframes`
     0% {
-      opacity: 0;
       transform: translate(-15%, 0)
     }
     100% {
@@ -26,8 +26,8 @@ const Hero = (props) => {
   const HeadingText1 = styled.h1`
     color: ${props.colors.content};
     font-weight: 300;
-    margin:0px;
-    animation: ${moveToRight} .7s ease-in-out .1s;
+    opacity: 0;
+    animation: ${moveToRight} 1s ease-in-out .5s forwards;
   `;
 
   const Name = styled.span`
@@ -36,7 +36,6 @@ const Hero = (props) => {
 
   const moveToLeft = keyframes`
   0% {
-    opacity: 0;
     transform: translate(15%, 0)
   }
   100% {
@@ -47,24 +46,21 @@ const Hero = (props) => {
   const HeadingText2 = styled.h1`
     color: ${props.colors.content};
     font-weight: 300;
-    margin:0px;
     padding-bottom: 15px;
-    animation: ${moveToLeft} .7s ease-in-out .1s;
+    opacity: 0;
+    animation: ${moveToLeft} 1s ease-in-out .5s forwards;
   `;
 
   const opacity = keyframes`
   0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
   }
   100% {
     opacity: 1;
   }
   `
   const HeadingButton = styled.a`
-    animation: ${opacity} 1.8s ease-in-out;
+    animation: ${opacity} 2s ease-in-out 1.3s forwards;
+    opacity: 0;
     color: ${props.colors.accent};
     box-sizing: border-box;
     box-shadow: inset 0 0 0 2px ${props.colors.accent};    
@@ -88,6 +84,11 @@ const Hero = (props) => {
 
     &:hover {
       color: ${props.colors.accent2};
+      text-shadow: 0 0 3px ${props.colors.accent},
+       0 0 5px ${props.colors.accent}, 
+       0 0 7px ${props.colors.accent};
+      box-shadow: inset 0px 0px 6px 3px ${props.colors.accent}, 0px 0px 2px 2px ${props.colors.accent};    
+
     }
 
     &:hover::before,
@@ -96,12 +97,18 @@ const Hero = (props) => {
       height: 100%;
     }
 
+    @keyframes vertical {
+      to{
+        box-shadow: inset 0 -5px 4px ${props.colors.accent}, 0px 5px 4px ${props.colors.accent};
+        width: 100%
+      }
+    }
     &:hover::before {
       border-top-color: ${props.colors.accent2};
       border-right-color: ${props.colors.accent2};
       transition:
         width 0.25s ease-out, 
-        height 0.25s ease-out 0.25s; 
+        height 0.25s ease-out 0.25s;
     }
 
     &:hover::after {
@@ -109,7 +116,9 @@ const Hero = (props) => {
     border-left-color: ${props.colors.accent2};
     transition: 
       height 0.25s ease-out,
-      width 0.25s ease-out 0.25s;
+      width 0.25s ease-out 0.25s; 
+ 
+
   }
   `
   return (
