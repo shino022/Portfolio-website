@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import IconsContainer from './IconsContainer';
-import profileImage from '../images/Untitled.svg';
 import ProfileIcon from './ProfileIcon';
 const About = (props) => {
   const Section = styled.section`
@@ -8,12 +7,18 @@ const About = (props) => {
     flex-direction: column;
     height: 100vh; // remove
     padding-top: 50px;
+    @media (max-width: ${props.mediaWidth.phone}) {
+      padding-top: 40px;
+    }
   `
   const Title = styled.h2`
     color: ${props.colors.accent};
     font-size: 2rem;
     text-align: center;
-    padding-top: 30px;
+    padding: 30px 0;
+    @media (max-width: ${props.mediaWidth.phone}) {
+      padding: 30px 0;
+    }
   `;
 
   const ContentWrapper = styled.div`
@@ -35,12 +40,12 @@ const About = (props) => {
     }
   `
   const Profile = styled.div`
-    color: white; // remove
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap:30px;
   `;
-  const Picture = styled.img`
-    max-width: 360px;
-    filter: invert(84%) sepia(13%) saturate(1700%) hue-rotate(72deg) brightness(102%) contrast(95%);
-  `;
+
   const Description = styled.div`
     max-width: 360px;
     color: ${props.colors.content};

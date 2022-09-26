@@ -18,6 +18,7 @@ const TechstackIcon = (props) => {
 
   const Wrapper = styled.div`
     position: relative;
+    user-select: none;
     width: 120px; 
     height: 120px;
     opacity: 0;
