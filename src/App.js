@@ -15,11 +15,21 @@ const App = () => {
     accent2: 'white', 
     content: 'white'
   };
+  const mediaWidth = {
+    tablet: '1000px',
+    phone: '500px'
+  };
 
   const Content = styled.main`
     max-width: 1600px;
     margin: 0px auto;
     padding: 150px;
+    @media (max-width: ${mediaWidth.tablet}) {
+      padding: 20px;
+    }
+    @media (max-width: ${mediaWidth.phone}) {
+      padding: 0;
+    }
   `
 
   return (
@@ -28,7 +38,7 @@ const App = () => {
       <Nav colors={colors}/>
       <Content>
         <Background colors={colors}/>
-        <About colors={colors} />
+        <About colors={colors} mediaWidth={mediaWidth}/>
       </Content>
     </div>
   );

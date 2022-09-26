@@ -14,27 +14,29 @@ const About = (props) => {
   `;
   const Content = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap:50px;
+    @media (max-width: ${props.mediaWidth.tablet}) {
+      flex-direction: column;
+      align-items: center;
+    }
   `
   const Profile = styled.div`
-    width: 50%;
     color: white; // remove
   `;
   const Picture = styled.img`
   `;
   const Description = styled.div`
+    max-width: 360px;
     color: ${props.colors.content};
-
+    @media (max-width: ${props.mediaWidth.phone}) {
+      max-width: 300px;
+    }
+    
   `;
   const Techstack = styled.div`
-    width: 50%;
     color: white; // temp
   `;
-  //------------------------------------
-
-
-
 
   return(
     <Section id='about'>
@@ -49,7 +51,7 @@ const About = (props) => {
           </Description>
         </Profile>
         <Techstack>
-          <IconsContainer colors={props.colors}/>
+          <IconsContainer colors={props.colors} mediaWidth={props.mediaWidth} />
         </Techstack>
       </Content>
 

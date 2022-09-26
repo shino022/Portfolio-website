@@ -50,20 +50,20 @@ const IconsContainer = (props) => {
   return(
       <Wrapper id='icons-container'>
         <Row>
-          <TechstackIcon visible={visible} colors={props.colors} logo={logos[0]}/>
-          <TechstackIcon visible={visible} colors={props.colors} logo={logos[1]}/>
-          <TechstackIcon visible={visible} colors={props.colors} logo={logos[2]}/>
+          <TechstackIcon visible={visible} colors={props.colors} logo={logos[0]} mediaWidth={props.mediaWidth}/>
+          <TechstackIcon visible={visible} colors={props.colors} logo={logos[1]} mediaWidth={props.mediaWidth}/>
+          <TechstackIcon visible={visible} colors={props.colors} logo={logos[2]} mediaWidth={props.mediaWidth}/>
         </Row>
         <Row>
-          <TechstackIcon visible={visible} colors={props.colors} logo={logos[3]}/>
-          <TechstackIcon visible={visible} colors={props.colors} logo={logos[4]}/>
-          <TechstackIcon visible={visible} colors={props.colors} logo={logos[5]}/>
-          <TechstackIcon visible={visible} colors={props.colors} logo={logos[6]}/>
+          <TechstackIcon visible={visible} colors={props.colors} logo={logos[3]} mediaWidth={props.mediaWidth}/>
+          <TechstackIcon visible={visible} colors={props.colors} logo={logos[4]} mediaWidth={props.mediaWidth}/>
+          <TechstackIcon visible={visible} colors={props.colors} logo={logos[5]} mediaWidth={props.mediaWidth}/>
+          <TechstackIcon visible={visible} colors={props.colors} logo={logos[6]} mediaWidth={props.mediaWidth}/>
         </Row>
         <Row>
-          <TechstackIcon visible={visible} colors={props.colors} logo={logos[7]}/>
-          <TechstackIcon visible={visible} colors={props.colors} logo={logos[8]}/>
-          <TechstackIcon visible={visible} colors={props.colors} logo={logos[9]}/>
+          <TechstackIcon visible={visible} colors={props.colors} logo={logos[7]} mediaWidth={props.mediaWidth}/>
+          <TechstackIcon visible={visible} colors={props.colors} logo={logos[8]} mediaWidth={props.mediaWidth}/>
+          <TechstackIcon visible={visible} colors={props.colors} logo={logos[9]} mediaWidth={props.mediaWidth}/>
         </Row>
       </Wrapper>
   );
