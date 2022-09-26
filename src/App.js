@@ -23,7 +23,7 @@ const App = () => {
   const Content = styled.main`
     max-width: 1600px;
     margin: 0px auto;
-    padding: 150px;
+    padding: 0px 150px;
     @media (max-width: ${mediaWidth.tablet}) {
       padding: 20px;
     }
