@@ -10,9 +10,12 @@ const ProfileIcon = (props) => {
 
   const Svg = styled(attrs)` 
     padding:10px;
-    width: 200px;
-    height: 200px;
-    
+    max-width: 230px;
+    max-height: 230px;
+    @media (max-width: ${props.mediaWidth.phone}) {
+      max-width: 180px;
+      max-height: 180px;
+    }
   `;
 
   return(

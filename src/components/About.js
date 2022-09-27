@@ -64,7 +64,7 @@ const About = (props) => {
       <ContentWrapper>
         <Content>
           <Profile id='profile'>
-            <ProfileIcon color={props.colors.accent} />
+            <ProfileIcon color={props.colors.accent} mediaWidth={props.mediaWidth} />
             <Description>
               Committed to the idea of life-long learning, I’m a full stack developer with a passion for JavaScript, React and all things web development. The unique combination of creativity, logic, technology and never running out of new things to discover, drives my excitement and passion for web development. Aside from development, I like working out and drinking coffee.
             </Description>
