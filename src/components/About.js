@@ -5,21 +5,12 @@ const About = (props) => {
   const Section = styled.section`
     display: flex;
     flex-direction: column;
-    height: 100vh; // remove
+    //height: 100vh;
     padding-top: 50px;
     @media (max-width: ${props.mediaWidth.phone}) {
       padding-top: 40px;
     }
   `
-  const Title = styled.h2`
-    color: ${props.colors.accent};
-    font-size: 2rem;
-    text-align: center;
-    padding: 30px 0;
-    @media (max-width: ${props.mediaWidth.phone}) {
-      padding: 30px 0;
-    }
-  `;
 
   const ContentWrapper = styled.div`
     display: flex;
@@ -60,7 +51,7 @@ const About = (props) => {
 
   return(
     <Section id='about'>
-      <Title>ABOUT</Title>
+      <props.Title>ABOUT</props.Title>
       <ContentWrapper>
         <Content>
           <Profile id='profile'>

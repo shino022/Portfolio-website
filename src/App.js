@@ -1,6 +1,7 @@
 import Hero from './components/Hero';
 import Nav from './components/Nav';
 import About from './components/About';
+import Projects from './components/Projects';
 import Background from './components/Background';
 import "./App.css";
 import styled from 'styled-components';
@@ -15,10 +16,21 @@ const App = () => {
     accent2: 'white', 
     content: 'white'
   };
+
   const mediaWidth = {
     tablet: '1000px',
     phone: '500px'
   };
+
+  const Title = styled.h2`
+  color: ${colors.accent};
+  font-size: 2rem;
+  text-align: center;
+  padding: 35px 0;
+  @media (max-width: ${mediaWidth.phone}) {
+    padding: 30px 0;
+  }
+`;
 
   const Content = styled.main`
     max-width: 1600px;
@@ -38,7 +50,8 @@ const App = () => {
       <Nav colors={colors}/>
       <Content>
         <Background colors={colors}/>
-        <About colors={colors} mediaWidth={mediaWidth}/>
+        <About Title={Title} colors={colors} mediaWidth={mediaWidth}/>
+        <Projects Title={Title} colors={colors} mediaWidth={mediaWidth}/>
       </Content>
     </div>
   );
