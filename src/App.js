@@ -2,6 +2,7 @@ import Hero from './components/Hero';
 import Nav from './components/Nav';
 import About from './components/About';
 import Projects from './components/Projects';
+import Contact from './components/Contact';
 import Background from './components/Background';
 import "./App.css";
 import styled from 'styled-components';
@@ -53,6 +54,7 @@ const App = () => {
         <Background colors={colors}/>
         <About Title={Title} colors={colors} mediaWidth={mediaWidth}/>
         <Projects Title={Title} colors={colors} mediaWidth={mediaWidth}/>
+        <Contact Title={Title} colors={colors} mediaWidth={mediaWidth}/>
       </Content>
     </div>
   );

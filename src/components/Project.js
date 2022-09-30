@@ -4,7 +4,7 @@ const Project = (props) => {
   const ProjectWrapper = styled.div`
     display: flex;
     justify-content: center;
-    padding-bottom: 70px;
+    padding-bottom: 100px;
   `
   const ProjectContainer = styled.div`
     position: relative;
@@ -19,7 +19,7 @@ const Project = (props) => {
   `
 
   const ImageContianer = styled.div`
-    max-width:600px;
+    max-width:800px;
     z-index: 3;
   `
 

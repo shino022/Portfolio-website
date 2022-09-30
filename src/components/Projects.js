@@ -11,7 +11,7 @@ const Projects = (props) => {
     {
       image: shopImage,
       name: 'Fake shop',
-      description: 'A fake store React app, built with React, React Router, Fake Store API, Styled components and Bootstrap.',
+      description: 'A fake store React app, built with React, React Router, Fake Store API and Bootstrap.',
       github: 'https://github.com/shino022/Shop',
       link: 'https://shino022.github.io/Shop/'
     },

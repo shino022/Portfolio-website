@@ -1,7 +1,20 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import IconsContainer from './IconsContainer';
 import ProfileIcon from './ProfileIcon';
+import { useEffect } from 'react';
 const About = (props) => {
+  useEffect(() => {
+    const profileElem = document.querySelector("#profile");
+    var observer = new IntersectionObserver((entries) => {
+      if(entries[0].isIntersecting === true){
+        profileElem.classList.add('visible');
+        console.log("profile Element is on page");
+      }
+    }, { threshold: [1] });
+
+    observer.observe(profileElem);
+  },[]);
+
   const Section = styled.section`
     display: flex;
     flex-direction: column;
@@ -30,11 +43,26 @@ const About = (props) => {
       align-items: center;
     }
   `
+
+  const moveToRight = keyframes`
+  0% {
+    transform: translate(-15%, 0)
+  }
+  100% {
+    opacity: 1;
+  }
+  `
+
   const Profile = styled.div`
     display: flex;
     flex-direction: column;
     align-items:center;
     gap:30px;
+    opacity: 0;
+
+    &.visible {
+      animation: ${moveToRight} 1s ease-in-out forwards;
+    }
   `;
 
   const Description = styled.div`
