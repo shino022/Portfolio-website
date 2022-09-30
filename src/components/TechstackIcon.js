@@ -22,7 +22,7 @@ const TechstackIcon = (props) => {
     width: 120px; 
     height: 120px;
     opacity: 0;
-    transition: opacity 1.5s ease-in-out ${(props.logo.order/10)+.5}s;
+    transition: opacity 1.5s ease-in-out ${(props.logo.order/10)}s;
     @media (max-width: ${props.mediaWidth.phone}) {
       width: 100px; 
       height: 100px;
