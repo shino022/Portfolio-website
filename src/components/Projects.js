@@ -36,7 +36,6 @@ const Projects = (props) => {
       github: 'https://github.com/shino022/TIC-TAC-TOE',
       link: 'https://shino022.github.io/TIC-TAC-TOE/'
     }
-
   ]
 
   const Section = styled.section`

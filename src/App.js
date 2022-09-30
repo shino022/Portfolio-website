@@ -27,8 +27,9 @@ const App = () => {
   font-size: 2rem;
   text-align: center;
   padding: 35px 0;
+  padding-bottom: 60px;
   @media (max-width: ${mediaWidth.phone}) {
-    padding: 30px 0;
+    padding: 20px 0;
   }
 `;
 
