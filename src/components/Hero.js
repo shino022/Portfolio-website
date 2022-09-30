@@ -12,6 +12,9 @@ const Hero = (props) => {
     text-align: center;
     z-index: 2;
     font-size: 1.3rem;
+    @media (max-width: ${props.mediaWidth.phone}) {
+      font-size: 1rem;
+    }
   `;
 
   const moveToRight = keyframes`
@@ -27,7 +30,7 @@ const Hero = (props) => {
     color: ${props.colors.content};
     font-weight: 300;
     opacity: 0;
-    animation: ${moveToRight} 1s ease-in-out .5s forwards;
+    animation: ${moveToRight} 1s ease-in-out 1s forwards;
   `;
 
   const Name = styled.span`
@@ -48,7 +51,7 @@ const Hero = (props) => {
     font-weight: 300;
     padding-bottom: 15px;
     opacity: 0;
-    animation: ${moveToLeft} 1s ease-in-out .5s forwards;
+    animation: ${moveToLeft} 1s ease-in-out 1s forwards;
   `;
 
   const opacity = keyframes`
@@ -59,7 +62,7 @@ const Hero = (props) => {
   }
   `
   const HeadingButton = styled.a`
-    animation: ${opacity} 2s ease-in-out 1.3s forwards;
+    animation: ${opacity} 2s ease-in-out 1.8s forwards;
     opacity: 0;
     color: ${props.colors.accent};
     box-sizing: border-box;

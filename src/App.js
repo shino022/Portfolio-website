@@ -46,7 +46,7 @@ const App = () => {
 
   return (
     <div  className="App">
-      <Hero colors={colors}/>
+      <Hero colors={colors} mediaWidth={mediaWidth}/>
       <Nav colors={colors}/>
       <Content>
         <Background colors={colors}/>
