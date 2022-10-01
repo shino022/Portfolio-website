@@ -21,7 +21,7 @@ const IconsContainer = (props) => {
       if(entries[0].isIntersecting === true){
         setVisible(true);
       }
-    }, { threshold: [1] });
+    }, { threshold: [0.5] });
 
     observer.observe(document.querySelector("#icons-container"));
   },[]);

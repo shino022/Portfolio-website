@@ -1,6 +1,51 @@
-import styled, { keyframes } from 'styled-components';
-
+import styled from 'styled-components';
+import { useEffect, useState } from 'react';
 const Nav = (props) => {
+  const [ activePage, setActivePage ] = useState();
+  useEffect(() => {
+    const aboutSection = document.querySelector("#about");
+    const projectsSection = document.querySelector("#projects");
+    const contactSection = document.querySelector("#contact");
+    const aboutLink = document.getElementById('about-link');
+    const projectLink = document.getElementById('projects-link');
+    const contactLink = document.getElementById('contact-link');
+    const links = [ aboutLink, projectLink, contactLink];
+    const mainElem = document.querySelector('main');
+    
+
+    const observer = new IntersectionObserver((entries) => {
+      if(entries[0].isIntersecting === true){
+        links.forEach(link => link.classList.remove('active'));
+        document.getElementById(`${entries[0].target.id}-link`).classList.add('active');
+      }
+    }, { threshold: [0.8] });
+
+    const observer2 = new IntersectionObserver((entries) => {
+      if(entries[0].isIntersecting === true){
+        links.forEach(link => link.classList.remove('active'));
+        projectLink.classList.add('active');
+      }
+    }, { threshold: [0.4] });
+    
+    observer2.observe(projectsSection);
+    observer.observe(aboutSection);
+    observer.observe(contactSection);
+
+    // sectionElems.forEach((elem)=>{
+    //   const observer = new IntersectionObserver((entries) => {
+    //     if(entries[0].isIntersecting === true){
+    //       aboutSection.classList.remove('active');
+    //       projectsSection.classList.remove('active');
+    //       contactSection.classList.remove('active');
+    //       elem.classList.add('active');
+    //     } 
+    //   }, { threshold: [0.2] });
+  
+    //   observer.observe(elem);
+    // });
+
+  },[]);
+
   const NavBar = styled.nav`
     background-color: ${props.colors.primary};
     border-top: 1px solid ${props.colors.accent};
@@ -28,14 +73,20 @@ const Nav = (props) => {
     color: ${props.colors.content};
     text-decoration: none;
     font-size: 14px;
+    &.active{
+      color: ${props.colors.accent};
+      @media (max-width:${props.mediaWidth.phone}) {
+        color: ${props.colors.content};
+      }
+    }
   `
   return(
     <NavBar>
       <Logo>Logo</Logo>
       <List>
-        <Item><Link href='#about'>About</Link></Item>
-        <Item><Link href='#projects'>Projects</Link></Item>
-        <Item><Link href='#contact'>Contact</Link></Item>
+        <Item><Link id='about-link' href='#about'>About</Link></Item>
+        <Item><Link id='projects-link' href='#projects'>Projects</Link></Item>
+        <Item><Link id='contact-link' href='#contact'>Contact</Link></Item>
       </List>
     </NavBar>
   );

@@ -8,9 +8,8 @@ const About = (props) => {
     var observer = new IntersectionObserver((entries) => {
       if(entries[0].isIntersecting === true){
         profileElem.classList.add('visible');
-        console.log("profile Element is on page");
       }
-    }, { threshold: [1] });
+    }, { threshold: [0.5] });
 
     observer.observe(profileElem);
   },[]);
@@ -18,7 +17,6 @@ const About = (props) => {
   const Section = styled.section`
     display: flex;
     flex-direction: column;
-    //height: 100vh;
     padding-top: 50px;
     @media (max-width: ${props.mediaWidth.phone}) {
       padding-top: 40px;

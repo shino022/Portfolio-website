@@ -49,7 +49,7 @@ const App = () => {
   return (
     <div  className="App">
       <Hero colors={colors} mediaWidth={mediaWidth}/>
-      <Nav colors={colors}/>
+      <Nav colors={colors} mediaWidth={mediaWidth}/>
       <Content>
         <Background colors={colors}/>
         <About Title={Title} colors={colors} mediaWidth={mediaWidth}/>

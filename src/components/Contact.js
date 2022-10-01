@@ -1,6 +1,14 @@
+import styled from 'styled-components'
 const Contact = (props) => {
+
+  const Section = styled.section`
+    height: 500px;//remove
+ `
+
   return(
-    <props.Title id='contact'>Contact</props.Title>
+    <Section id='contact'>
+      <props.Title id='contact'>Contact</props.Title>
+    </Section>
   );
 }
 
