@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Portfolio-website/static/css/main.8dfc825e.css",
+    "main.js": "/Portfolio-website/static/js/main.1d35e53b.js",
+    "static/media/where_is_waldo.jpg": "/Portfolio-website/static/media/where_is_waldo.24f4b1dcee37182e3af2.jpg",
+    "static/media/shop.jpg": "/Portfolio-website/static/media/shop.a8e0515390bb81f79416.jpg",
+    "static/media/wheather-app.jpg": "/Portfolio-website/static/media/wheather-app.775d9d773574df8b775b.jpg",
+    "static/media/tic-tac-toe.jpg": "/Portfolio-website/static/media/tic-tac-toe.4f328f95b040308e4a89.jpg",
+    "static/media/bootstrap.png": "/Portfolio-website/static/media/bootstrap.f132cb791703420e69ca.png",
+    "static/media/webpack.png": "/Portfolio-website/static/media/webpack.a1af828b4e65d37668e1.png",
+    "static/media/git.png": "/Portfolio-website/static/media/git.3092b5991e8accb9e7c3.png",
+    "static/media/react.png": "/Portfolio-website/static/media/react.cb15bfce2a9004ce61c5.png",
+    "static/media/Logo.png": "/Portfolio-website/static/media/Logo.e40b5de5f92d26f5a70e.png",
+    "index.html": "/Portfolio-website/index.html",
+    "main.8dfc825e.css.map": "/Portfolio-website/static/css/main.8dfc825e.css.map",
+    "main.1d35e53b.js.map": "/Portfolio-website/static/js/main.1d35e53b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8dfc825e.css",
+    "static/js/main.1d35e53b.js"
+  ]
+}
