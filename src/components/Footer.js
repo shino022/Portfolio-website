@@ -16,7 +16,7 @@ const Footer = (props) => {
   `
 
   return(
-    <Container>Copyright © 2022 <Link onClick={()=>{window.open('https://github.com/shino022')}}>shino022</Link></Container>
+    <Container>Copyright © 2022 <Link onClick={()=>{window.open('https://github.com/shino022/Portfolio-website')}}>shino022</Link></Container>
   )
 }
 
