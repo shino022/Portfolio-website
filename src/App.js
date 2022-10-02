@@ -3,6 +3,7 @@ import Nav from './components/Nav';
 import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 import Background from './components/Background';
 import "./App.css";
 import styled from 'styled-components';
@@ -35,6 +36,7 @@ const App = () => {
 `;
 
   const Content = styled.main`
+    position: relative;
     max-width: 1600px;
     margin: 0px auto;
     padding: 0px 150px;
@@ -55,6 +57,7 @@ const App = () => {
         <About Title={Title} colors={colors} mediaWidth={mediaWidth}/>
         <Projects Title={Title} colors={colors} mediaWidth={mediaWidth}/>
         <Contact Title={Title} colors={colors} mediaWidth={mediaWidth}/>
+        <Footer colors={colors}/>
       </Content>
     </div>
   );

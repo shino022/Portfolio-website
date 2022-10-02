@@ -102,12 +102,6 @@ const Hero = (props) => {
       height: 100%;
     }
 
-    @keyframes vertical {
-      to{
-        box-shadow: inset 0 -5px 4px ${props.colors.accent}, 0px 5px 4px ${props.colors.accent};
-        width: 100%
-      }
-    }
     &:hover::before {
       border-top-color: ${props.colors.accent2};
       border-right-color: ${props.colors.accent2};

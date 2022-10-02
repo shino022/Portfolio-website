@@ -11,7 +11,7 @@ const Projects = (props) => {
     {
       image: shopImage,
       name: 'Fake shop',
-      description: 'A fake store React app, built with React, React Router, Fake Store API and Bootstrap.',
+      description: 'A fake store site, built with React, React Router, Fake Store API and Bootstrap.',
       github: 'https://github.com/shino022/Shop',
       link: 'https://shino022.github.io/Shop/'
     },
@@ -48,7 +48,7 @@ const Projects = (props) => {
 `
   return(
     <Section id='projects'>
-      <props.Title>Projects</props.Title>
+      <props.Title>PROJECTS</props.Title>
       {projectList.map((data, index) =>
         <Project colors={props.colors} mediaWidth={props.mediaWidth} project={data} reverse={index%2===1} key={data.name} />)}
     </Section>
