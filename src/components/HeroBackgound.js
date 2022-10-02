@@ -73,20 +73,26 @@ const HeroBackground = (props) => {
       for (let i = 0; i < particles.length; i++) {
         particles[i].update();
         particles[i].draw();
-        if((particles[i].x-mouse.x < 4  && particles[i].x-mouse.x > -4) ||
-            (particles[i].y-mouse.y < 4  && particles[i].y-mouse.y > -4)) {
-            ctx.beginPath();
-            ctx.strokeStyle = props.colors.particle;
-            ctx.lineWidth = particles[i].size;
-            ctx.moveTo(mouse.x, mouse.y);
-            ctx.lineTo(particles[i].x, particles[i].y);
-            ctx.stroke();
+        const dxMouse = particles[i].x - mouse.x
+        const dyMouse = particles[i].y - mouse.y
+        const distMouse = Math.sqrt(dxMouse**2 + dyMouse**2);
+        if(( distMouse > 200 &&
+          ((particles[i].x-mouse.x < 4  && particles[i].x-mouse.x > -4) ||
+          (particles[i].y-mouse.y < 4  && particles[i].y-mouse.y > -4)))) {
+          ctx.beginPath();
+          ctx.strokeStyle = props.colors.particle;
+          ctx.lineWidth = particles[i].size;
+          ctx.moveTo(mouse.x, mouse.y);
+          ctx.lineTo(particles[i].x, particles[i].y);
+          ctx.stroke();
         }
         for (let j = i; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x
           const dy = particles[i].y - particles[j].y
-          if ((particles[i].x-particles[j].x < 3  && particles[i].x-particles[j].x > -3) ||
-            (particles[i].y-particles[j].y < 3  && particles[i].y-particles[j].y > -3)) {
+          const dist = Math.sqrt(dx**2 + dy**2);
+          if ((dist > 200 &&
+            ((particles[i].x-particles[j].x < 3  && particles[i].x-particles[j].x > -3) ||
+            (particles[i].y-particles[j].y < 3  && particles[i].y-particles[j].y > -3)))) {
             ctx.beginPath();
             ctx.strokeStyle = particles[i].color;
             ctx.lineWidth = particles[i].size/3;
