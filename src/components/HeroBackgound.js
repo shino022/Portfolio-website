@@ -76,7 +76,7 @@ const HeroBackground = (props) => {
         const dxMouse = particles[i].x - mouse.x
         const dyMouse = particles[i].y - mouse.y
         const distMouse = Math.sqrt(dxMouse**2 + dyMouse**2);
-        if(( distMouse > 200 &&
+        if(( distMouse > 300 &&
           ((particles[i].x-mouse.x < 4  && particles[i].x-mouse.x > -4) ||
           (particles[i].y-mouse.y < 4  && particles[i].y-mouse.y > -4)))) {
           ctx.beginPath();
@@ -90,7 +90,7 @@ const HeroBackground = (props) => {
           const dx = particles[i].x - particles[j].x
           const dy = particles[i].y - particles[j].y
           const dist = Math.sqrt(dx**2 + dy**2);
-          if ((dist > 200 &&
+          if ((dist > 300 &&
             ((particles[i].x-particles[j].x < 3  && particles[i].x-particles[j].x > -3) ||
             (particles[i].y-particles[j].y < 3  && particles[i].y-particles[j].y > -3)))) {
             ctx.beginPath();
