@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import logoImage from'../images/Logo.png';
 import { useEffect, useState } from 'react';
 const Nav = (props) => {
   useEffect(() => {
@@ -45,8 +46,9 @@ const Nav = (props) => {
     align-items: center;
     z-index: 10;
   `
-  const Logo = styled.div`
-
+  const Logo = styled.img`
+    height: 45px;
+    padding-top: 3px;
   `
   const List = styled.ul`
     display: flex;
@@ -68,7 +70,9 @@ const Nav = (props) => {
   `
   return(
     <NavBar>
-      <Logo>Logo</Logo>
+      <Link href=''>
+       <Logo src={logoImage}/>
+      </Link>
       <List>
         <Item><Link id='about-link' href='#about'>About</Link></Item>
         <Item><Link id='projects-link' href='#projects'>Projects</Link></Item>

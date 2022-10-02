@@ -121,7 +121,7 @@ const Hero = (props) => {
   }
   `
   return (
-    <Container>
+    <Container id='hero'>
       <HeroBackground mediaWidth={props.mediaWidth} colors={props.colors}/>
       <Heading>
         <HeadingText1>
