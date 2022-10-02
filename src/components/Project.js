@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import GithubIcon from './GithubIcon';
+import PopupIcon from './PopupIcon';
 const Project = (props) => {
   const ProjectWrapper = styled.div`
     display: flex;
@@ -89,6 +90,10 @@ const Project = (props) => {
     color: ${props.colors.content};
   `
 
+  const Icons = styled.div`
+    display: flex;
+    gap: 10px;
+  `
   return(
     <ProjectWrapper>
       {props.reverse ?       
@@ -97,7 +102,10 @@ const Project = (props) => {
           <ProjectDetailContent>
             <ProjectTitle> {props.project.name} </ProjectTitle>
             <ProjectDescription> {props.project.description} </ProjectDescription>
-            <GithubIcon link={props.project.github} colors={props.colors}/>
+            <Icons>
+              <GithubIcon link={props.project.github} colors={props.colors}/>
+              <PopupIcon link={props.project.link} colors={props.colors}/>
+            </Icons>
             <Frame />
           </ProjectDetailContent>
         </ProjectDetail>
@@ -115,7 +123,10 @@ const Project = (props) => {
           <ProjectDetailContent>
             <ProjectTitle> {props.project.name} </ProjectTitle>
             <ProjectDescription> {props.project.description} </ProjectDescription>
-            <GithubIcon link={props.project.github} colors={props.colors}/>
+            <Icons>
+              <GithubIcon link={props.project.github} colors={props.colors}/>
+              <PopupIcon link={props.project.link} colors={props.colors}/>
+            </Icons>
             <Frame />
           </ProjectDetailContent>
         </ProjectDetail>
