@@ -52,6 +52,7 @@ const Contact = (props) => {
     margin-top: 15px;
     padding: 10px 25px;
     margin: 10px;
+    font-size: 20px;
     text-decoration: none;
     position: relative;
     vertical-align: middle;
