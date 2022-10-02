@@ -122,7 +122,7 @@ const Hero = (props) => {
   `
   return (
     <Container>
-      <HeroBackground colors={props.colors}/>
+      <HeroBackground mediaWidth={props.mediaWidth} colors={props.colors}/>
       <Heading>
         <HeadingText1>
           Hi, I'm <Name>Seunghoon</Name>.
