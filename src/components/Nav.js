@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { useEffect, useState } from 'react';
 const Nav = (props) => {
-  const [ activePage, setActivePage ] = useState();
   useEffect(() => {
     const aboutSection = document.querySelector("#about");
     const projectsSection = document.querySelector("#projects");
@@ -25,24 +24,11 @@ const Nav = (props) => {
         links.forEach(link => link.classList.remove('active'));
         projectLink.classList.add('active');
       }
-    }, { threshold: [0.4] });
+    }, { threshold: [window.innerHeight < 1400 ? 0.3 : 0.6] });
     
     observer2.observe(projectsSection);
     observer.observe(aboutSection);
     observer.observe(contactSection);
-
-    // sectionElems.forEach((elem)=>{
-    //   const observer = new IntersectionObserver((entries) => {
-    //     if(entries[0].isIntersecting === true){
-    //       aboutSection.classList.remove('active');
-    //       projectsSection.classList.remove('active');
-    //       contactSection.classList.remove('active');
-    //       elem.classList.add('active');
-    //     } 
-    //   }, { threshold: [0.2] });
-  
-    //   observer.observe(elem);
-    // });
 
   },[]);
 
@@ -75,7 +61,7 @@ const Nav = (props) => {
     font-size: 14px;
     &.active{
       color: ${props.colors.accent};
-      @media (max-width:${props.mediaWidth.phone}) {
+      @media (max-width:${props.mediaWidth.tablet}) {
         color: ${props.colors.content};
       }
     }
