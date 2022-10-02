@@ -37,6 +37,7 @@ const Contact = (props) => {
     text-align: center;
     padding: 20px;
     font-size: 20px;
+    opacity: .8;
     @media (max-width: ${props.mediaWidth.phone}) {
       font-size: 16px;
     }
