@@ -13,8 +13,8 @@ const App = () => {
     primary: 'black',
     secondary: 'rgb(30, 30, 30)', 
     accent: 'rgb(113, 249, 140)',
-    particle: 'rgba(113, 249, 140, 0.10)',
-    backgroundParticle: 'rgba(113, 249, 140, 0.25)',
+    particle: 'rgba(113, 249, 140, 0.15)',
+    backgroundParticle: 'rgba(113, 249, 140, 0.4)',
     accent2: 'white', 
     content: 'white'
   };
