@@ -11,9 +11,12 @@ const Footer = (props) => {
     left: 0;
     bottom: 0;
   `
+  const Link = styled.span`
+    cursor: pointer;
+  `
 
   return(
-    <Container>Copyright © 2022 shino022</Container>
+    <Container>Copyright © 2022 <Link onClick={()=>{window.open('https://github.com/shino022')}}>shino022</Link></Container>
   )
 }
 
