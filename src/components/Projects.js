@@ -12,8 +12,8 @@ const Projects = (props) => {
       image: estudyImage,
       name: 'E-study',
       description: 'A quiz and chat app, built with React, Express and Postgres',
-      github: 'https://github.com/shino022/TIC-TAC-TOE',
-      link: 'https://github.com/yaboyd1/estudy'
+      github: 'https://github.com/yaboyd1/estudy',
+      link: 'https://e-study-production.up.railway.app/'
     },
     {
       image: shopImage,
