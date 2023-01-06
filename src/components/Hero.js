@@ -68,7 +68,7 @@ const Hero = (props) => {
     box-sizing: border-box;
     box-shadow: inset 0 0 0 2px ${props.colors.accent};    
     margin-top: 15px;
-    padding: 5px 25px;
+    padding: 8px 40px;;
     text-decoration: none;
     position: relative;
     vertical-align: middle;
