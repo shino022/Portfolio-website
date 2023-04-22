@@ -48,8 +48,8 @@ const TechstackIcon = (props) => {
 
   const Logo = styled.img`
     margin-top: 5px;
-    width: 40%;
-    height: 40%;
+    max-width: 40%;
+    max-height: 40%;
   `
 
   const Name = styled.div`

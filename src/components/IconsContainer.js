@@ -1,14 +1,14 @@
 import { useEffect,useState } from 'react';
-import cssLogo from '../images/css.png';
-import gitLogo from '../images/git.png';
-import htmlLogo from '../images/html.png';
+import awsLogo from '../images/aws.png';
+import expressLogo from '../images/express.png';
+import mongodbLogo from '../images/mongodb.png';
 import jsLogo from '../images/js.png';
 import nodejsLogo from '../images/node.png';
 import reactLogo from '../images/react.png';
-import sassLogo from '../images/sass.png';
+import postgresqlLogo from '../images/postgresql.png';
 import bootstrapLogo from '../images/bootstrap.png';
 import webpackLogo from '../images/webpack.png';
-import sqlLogo from '../images/sql.png';
+import typescriptLogo from '../images/typescript.png';
 import styled from 'styled-components'; 
 import TechstackIcon from './TechstackIcon';
 
@@ -28,16 +28,16 @@ const IconsContainer = (props) => {
   const order = [1,2,3,4,5,6,7,8,9,10];
   const getRandomOrder = () => order.splice(Math.floor(Math.random()*order.length+0.5), 1);
   const logos = [
-    {image: cssLogo, name: 'CSS', order: getRandomOrder()},
-    {image: gitLogo, name: 'GIT', order: getRandomOrder()},
-    {image: htmlLogo, name: 'HTML', order: getRandomOrder()},
+    {image: awsLogo, name: 'AWS', order: getRandomOrder()},
+    {image: expressLogo, name: 'EXPRESS', order: getRandomOrder()},
+    {image: mongodbLogo, name: 'MONGODB', order: getRandomOrder()},
     {image: jsLogo, name: 'JS', order: getRandomOrder()},
     {image: nodejsLogo, name: 'NODEJS', order: getRandomOrder()},
     {image: reactLogo, name: 'REACT', order: getRandomOrder()},
-    {image: sassLogo, name: 'SASS', order: getRandomOrder()},
+    {image: postgresqlLogo, name: 'POSTGRES', order: getRandomOrder()},
     {image: bootstrapLogo, name: 'BOOTSTRAP', order: getRandomOrder()},
     {image: webpackLogo, name: 'WEBPACK', order: getRandomOrder()},
-    {image: sqlLogo, name: 'SQL', order: getRandomOrder()},
+    {image: typescriptLogo, name: 'TYPESCRIPT', order: getRandomOrder()},
   ];
   const Row = styled.div`
     display: flex;
