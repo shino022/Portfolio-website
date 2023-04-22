@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Project from './Project';
 import shopImage from '../images/shop.jpg';
-import waldoImage from '../images/where_is_waldo.jpg';
+import gptHighlighterImage from '../images/ChatGPTHighlighter.png';
 import estudyImage from '../images/e-study.jpg';
 import weatherAppImage from '../images/wheather-app.jpg';
 
@@ -16,25 +16,18 @@ const Projects = (props) => {
       link: 'https://e-study-production.up.railway.app/'
     },
     {
+      image: gptHighlighterImage,
+      name: 'Chat GPT Highlighter',
+      description: 'A Chrome Extension that  that generates quick responses to highlighted text',
+      github: 'https://github.com/shino022/GPT-extension',
+      link: 'https://chrome.google.com/webstore/detail/chatgpt-highlighter/kklcohoindmaphobgdkmenpjjpdomaao'
+    },
+    {
       image: shopImage,
       name: 'Fake shop',
       description: 'A fake store site, built with React, React Router, Fake Store API and Bootstrap',
       github: 'https://github.com/shino022/Shop',
       link: 'https://shino022.github.io/Shop/'
-    },
-    {
-      image: waldoImage,
-      name: 'Where is Waldo',
-      description: 'A Photo Tagging app built with React and Firebase',
-      github: 'https://github.com/shino022/Where-is-waldo',
-      link: 'https://shino022.github.io/Where-is-waldo/'
-    },
-    {
-      image: weatherAppImage,
-      name: 'The Weather App',
-      description: 'A weather app built with Open Weather API, Giphy API, Webpack, HTML, CSS and Javascript',
-      github: 'https://github.com/shino022/Weather-App',
-      link: 'https://shino022.github.io/Weather-App/'
     },
   ]
 
