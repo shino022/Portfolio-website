@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { useEffect } from 'react'
 const TechstackIcon = (props) => {
   useEffect(() => {
@@ -6,11 +6,8 @@ const TechstackIcon = (props) => {
     console.log(`prob.visible:${props.visible}`)
     if(props.visible){
       const wrapper = document.getElementById(props.logo.name);
-      // setTimeout(1, ()=>{
-        wrapper.classList.add('visible');
-        console.log(wrapper);
-      // })//(props.logo.order*100)+5000
-      
+      wrapper.classList.add('visible');
+      console.log(wrapper);
     }
 
   }, [props.visible, props.logo.order, props.logo.name])
@@ -21,15 +18,22 @@ const TechstackIcon = (props) => {
     xmlnsXlink: 'http://www.w3.org/1999/xlink',
   })``
 
+  const appear = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  `
   const Wrapper = styled.div`
     position: relative;
     user-select: none;
     width: 120px; 
     height: 120px;
     opacity: 0;
-    transition: opacity 1.5s ease-in-out ${(props.logo.order/10)+.5}s;
     &.visible {
-      opacity: 100 ;
+      animation: ${appear} 0.5s ease-in-out ${(props.logo.order/5)+1}s forwards;
     }
     @media (max-width: ${props.mediaWidth.phone}) {
       transition: opacity 1.5s ease-in-out ${(props.logo.order/10)}s;
