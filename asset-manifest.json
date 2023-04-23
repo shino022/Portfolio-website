@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio-website/static/css/main.8dfc825e.css",
-    "main.js": "/Portfolio-website/static/js/main.1935aa02.js",
+    "main.css": "/Portfolio-website/static/css/main.ccb124e1.css",
+    "main.js": "/Portfolio-website/static/js/main.cb39278f.js",
     "static/media/shop.jpg": "/Portfolio-website/static/media/shop.a8e0515390bb81f79416.jpg",
     "static/media/wheather-app.jpg": "/Portfolio-website/static/media/wheather-app.775d9d773574df8b775b.jpg",
     "static/media/aws.png": "/Portfolio-website/static/media/aws.c3a8553d2aadc3f80df7.png",
@@ -15,11 +15,11 @@
     "static/media/react.png": "/Portfolio-website/static/media/react.cb15bfce2a9004ce61c5.png",
     "static/media/Logo.png": "/Portfolio-website/static/media/Logo.e40b5de5f92d26f5a70e.png",
     "index.html": "/Portfolio-website/index.html",
-    "main.8dfc825e.css.map": "/Portfolio-website/static/css/main.8dfc825e.css.map",
-    "main.1935aa02.js.map": "/Portfolio-website/static/js/main.1935aa02.js.map"
+    "main.ccb124e1.css.map": "/Portfolio-website/static/css/main.ccb124e1.css.map",
+    "main.cb39278f.js.map": "/Portfolio-website/static/js/main.cb39278f.js.map"
   },
   "entrypoints": [
-    "static/css/main.8dfc825e.css",
-    "static/js/main.1935aa02.js"
+    "static/css/main.ccb124e1.css",
+    "static/js/main.cb39278f.js"
   ]
 }
