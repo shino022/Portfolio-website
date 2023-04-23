@@ -2,13 +2,18 @@ import styled from 'styled-components'
 import { useEffect } from 'react'
 const TechstackIcon = (props) => {
   useEffect(() => {
+    console.log('useEffecgt triggered')
+    console.log(`prob.visible:${props.visible}`)
     if(props.visible){
       const wrapper = document.getElementById(props.logo.name);
-      wrapper.classList.add('visible');
-      console.log(wrapper);
+      // setTimeout(1, ()=>{
+        wrapper.classList.add('visible');
+        console.log(wrapper);
+      // })//(props.logo.order*100)+5000
+      
     }
 
-  }, [props.visible])
+  }, [props.visible, props.logo.order, props.logo.name])
 
   const attrs = styled.svg.attrs({ 
     version: '1.1', 
@@ -23,6 +28,9 @@ const TechstackIcon = (props) => {
     height: 120px;
     opacity: 0;
     transition: opacity 1.5s ease-in-out ${(props.logo.order/10)+.5}s;
+    &.visible {
+      opacity: 100 ;
+    }
     @media (max-width: ${props.mediaWidth.phone}) {
       transition: opacity 1.5s ease-in-out ${(props.logo.order/10)}s;
       width: 100px; 
@@ -31,7 +39,6 @@ const TechstackIcon = (props) => {
   `
 
   const Svg = styled(attrs)` 
-
   `
   const LogoContainer = styled.div`
     position: absolute;
