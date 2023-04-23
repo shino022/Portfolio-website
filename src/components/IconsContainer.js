@@ -46,14 +46,9 @@ const IconsContainer = (props) => {
   `
   const Wrapper = styled.div`
     display: flex;
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out .5s;
-    &.visible {
-      opacity: 100 ;
-    }
   `
   return(
-      <Wrapper className={visible?"visible":""} id='icons-container'>
+      <Wrapper id='icons-container'>
         <Row>
           <TechstackIcon visible={visible} colors={props.colors} logo={logos[0]} mediaWidth={props.mediaWidth}/>
           <TechstackIcon visible={visible} colors={props.colors} logo={logos[1]} mediaWidth={props.mediaWidth}/>

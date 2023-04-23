@@ -33,7 +33,7 @@ const TechstackIcon = (props) => {
     height: 120px;
     opacity: 0;
     &.visible {
-      animation: ${appear} 0.5s ease-in-out ${(props.logo.order/5)+1}s forwards;
+      animation: ${appear} 1s ease-in-out ${(props.logo.order/5)+1}s forwards;
     }
     @media (max-width: ${props.mediaWidth.phone}) {
       transition: opacity 1.5s ease-in-out ${(props.logo.order/10)}s;

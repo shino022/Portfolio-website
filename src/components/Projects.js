@@ -3,8 +3,6 @@ import Project from './Project';
 import shopImage from '../images/shop.jpg';
 import gptHighlighterImage from '../images/ChatGPTHighlighter.png';
 import estudyImage from '../images/e-study.jpg';
-import weatherAppImage from '../images/wheather-app.jpg';
-
 
 const Projects = (props) => {
   const projectList = [
