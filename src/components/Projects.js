@@ -18,7 +18,7 @@ const Projects = (props) => {
     {
       image: gptHighlighterImage,
       name: 'Chat GPT Highlighter',
-      description: 'A Chrome Extension that  that generates quick responses to highlighted text',
+      description: 'A Chrome Extension that generates quick responses to highlighted text',
       github: 'https://github.com/shino022/GPT-extension',
       link: 'https://chrome.google.com/webstore/detail/chatgpt-highlighter/kklcohoindmaphobgdkmenpjjpdomaao'
     },
