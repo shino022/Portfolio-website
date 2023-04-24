@@ -83,7 +83,12 @@ const About = (props) => {
           <Profile id='profile'>
             <ProfileIcon color={props.colors.accent} mediaWidth={props.mediaWidth} />
             <Description>
-              Committed to the idea of life-long learning, I’m a full stack developer with a passion for JavaScript, React and all things web development. The unique combination of creativity, logic, technology and never running out of new things to discover, drives my excitement and passion for self growth. Aside from development, I like working out and drinking coffee.
+            With a dedication to learning that lasts a lifetime, 
+            I am a full stack developer who is deeply passionate about web development, 
+            specifically JavaScript, React and Express. I am constantly discovering new things, 
+            which is what excites and drives me. 
+            I love this unique combination of creativity, logic, and technology that challenges me to grow in new ways. 
+            When I'm not at work, you can find me hitting the gym or sipping a cup of coffee.
             </Description>
           </Profile>
           <Techstack>
